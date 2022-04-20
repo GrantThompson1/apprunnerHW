@@ -7,3 +7,5 @@ build:
 run:
   runtime-version: 3.7
   command: python server.py
+  network:
+    PORT: 5000

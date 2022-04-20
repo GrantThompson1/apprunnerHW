@@ -1,10 +1,14 @@
 from flask import Flask
 import os
 
-PORT = 8080
+PORT = os.environ.get('PORT')
 name = os.environ.get('NAME')
 if name == None or len(name) == 0:
   name = "world"
+
+if PORT == None or len(PORT) == 0:
+  PORT = 8080
+
 MESSAGE = "Hello, " + name + "!"
 print("Message: '" + MESSAGE + "'")
 

@@ -7,9 +7,9 @@ if name == None or len(name) == 0:
   name = "world"
 
 if PORT == None or len(PORT) == 0:
-  PORT = 8080
+  PORT = 80
 
-MESSAGE = "Hello, " + name +" ,port: " + PORT + "!"
+MESSAGE = "Hello, " + name +" ,port: " + str(PORT) + "!"
 print("Message: '" + MESSAGE + "'")
 
 app = Flask(__name__)
